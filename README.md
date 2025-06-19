@@ -21,6 +21,7 @@ Aplikasi berbasis React dan Ethereum (Ganache/MetaMask) untuk mencatat dan memve
 - MetaMask
 - Supabase (untuk login Web2)
 - Ethers.js
+- Truffle
 
 ---
 
@@ -28,5 +29,29 @@ Aplikasi berbasis React dan Ethereum (Ganache/MetaMask) untuk mencatat dan memve
 
 ### 1. **Clone repositori**
 ```bash
-git clone https://github.com/username/upah-harian-blockchain.git
-cd upah-harian-blockchain
+https://github.com/Muh-Ikbal/Wage-Checker-Blockchain.git
+cd wage-checker-blockchain
+```
+### 2. **Install Dependenci**
+```bash
+cd frontend-upah-harian
+npm install
+```
+### 3. **jalankan blockchain**
+```bash
+cd blockchain
+truffle compile
+truffle migrate
+```
+### 4. **salin contract address dari truffle migrate**
+paste contract di file:
+```bash
+cd frontend-upah-harian/components/blockchain.js
+```
+
+### 5. **Jalankan Project**
+pastikan berada di  /frontend-upah-harian:
+```bash
+npm run dev
+node server.js
+```
