@@ -58,6 +58,10 @@ export default function DashboardAdmin({ walletAddress, walletConnected }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if (amount < 0) {
+        alert("Upah tidak valid");
+        return;
+      }
       await addWage(workerId, name, amount, date);
       alert("Upah berhasil disimpan!");
       fetchData();
@@ -96,7 +100,7 @@ export default function DashboardAdmin({ walletAddress, walletConnected }) {
     <div className="p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Dashboard Mandor
+          Dashboard Admin
         </h1>
         <p className="text-gray-600">Kelola upah pekerja berbasis blockchain</p>
       </div>

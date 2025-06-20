@@ -42,7 +42,7 @@ export default function FormPekerja() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.message);
       alert(data.message);
-      navigate("/pekerja");
+      navigate("/workers");
     } catch (err) {
       alert("Error: " + err.message);
     } finally {
@@ -51,7 +51,7 @@ export default function FormPekerja() {
   };
 
   const handleBack = () => {
-    navigate("/pekerja");
+    navigate("/workers");
   };
 
   return (

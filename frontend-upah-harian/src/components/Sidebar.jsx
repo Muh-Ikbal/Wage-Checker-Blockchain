@@ -112,7 +112,7 @@ const Sidebar = ({
               <Database className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-gray-900">WorkChain</h1>
+              <h1 className="text-lg font-bold text-gray-900">BlockWage</h1>
               <p className="text-xs text-gray-600">Blockchain Payroll</p>
             </div>
           </div>

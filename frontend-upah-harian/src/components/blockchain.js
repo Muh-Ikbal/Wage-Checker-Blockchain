@@ -2,7 +2,7 @@
 import { BrowserProvider, Contract } from "ethers";
 import abi from "../../../blockchain/build/contracts/WageRecorder.json";
 
-const contractAddress = "0xc586876F9EDcD29356230D0dca057939cdEDE131";
+const contractAddress = "0x3758c84Df7c25EBcF80479099f3Ff735D7f4930f";
 
 const getReadProvider = () => new BrowserProvider(window.ethereum);
 

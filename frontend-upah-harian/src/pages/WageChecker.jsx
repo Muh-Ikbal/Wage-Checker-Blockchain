@@ -134,9 +134,7 @@ export default function WageCheckPage({
     setTotalWages(0);
   };
 
-  const openEtherscan = (txHash) => {
-    window.open(`https://etherscan.io/tx/${txHash}`, "_blank");
-  };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
@@ -145,22 +143,17 @@ export default function WageCheckPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
-              <button
-                onClick={handleGoBack}
-                className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg transition-all duration-300 hover:scale-110"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
+              
               <div className="flex items-center space-x-3">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-xl">
                   <Wallet className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-gray-900">
-                    Cek Upah Pekerja
+                    BlockWage
                   </h1>
                   <p className="text-sm text-gray-600">
-                    Verifikasi upah dari blockchain
+                    Sistem upah blockchain
                   </p>
                 </div>
               </div>
@@ -307,7 +300,7 @@ export default function WageCheckPage({
                   type="text"
                   value={workerId}
                   onChange={(e) => setWorkerId(e.target.value)}
-                  placeholder="Contoh: PK001"
+                  placeholder="Contoh: PEKERJA001"
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 />
               </div>
@@ -469,24 +462,12 @@ export default function WageCheckPage({
                               {formatCurrency(wage.amount)}
                             </p>
                             <div className="flex items-center space-x-2 mt-1 justify-end">
-                              {wage.verified ? (
                                 <span className="flex items-center text-sm text-green-600">
                                   <CheckCircle className="w-4 h-4 mr-1" />
                                   Terverifikasi
                                 </span>
-                              ) : (
-                                <span className="flex items-center text-sm text-yellow-600">
-                                  <AlertCircle className="w-4 h-4 mr-1" />
-                                  Belum Terverifikasi
-                                </span>
-                              )}
-                              <button
-                                onClick={() => openEtherscan(wage.txHash)}
-                                className="flex items-center text-blue-600 hover:text-blue-800 text-sm transition-colors"
-                              >
-                                <ExternalLink className="w-4 h-4 mr-1" />
-                                Lihat
-                              </button>
+                              
+                            
                             </div>
                           </div>
                         </div>

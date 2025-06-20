@@ -15,15 +15,6 @@ import {
 export default function LandingPage() {
   const [email, setEmail] = useState("");
 
-  const handleGetStarted = () => {
-    // Navigate to dashboard or login
-    alert("Mengarahkan ke dashboard...");
-  };
-
-  const handleCheckWage = () => {
-    // Navigate to wage check page
-    alert("Mengarahkan ke halaman pengecekan upah...");
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
@@ -61,18 +52,13 @@ export default function LandingPage() {
               </a>
             </nav>
             <div className="flex space-x-3">
-              <button
-                onClick={handleCheckWage}
+              <a
+              href="/wage-check"
                 className="px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors"
               >
                 Cek Upah
-              </button>
-              <button
-                onClick={handleGetStarted}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Masuk
-              </button>
+              </a>
+             
             </div>
           </div>
         </div>
@@ -101,20 +87,14 @@ export default function LandingPage() {
                 kepercayaan penuh untuk semua pihak.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button
-                  onClick={handleGetStarted}
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                >
-                  <span>Mulai Sekarang</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={handleCheckWage}
+               
+                <a
+                href="/wage-check"
                   className="bg-white hover:bg-gray-50 text-gray-700 font-semibold py-4 px-8 rounded-xl transition-all duration-300 border border-gray-200 hover:border-gray-300 flex items-center justify-center space-x-2"
                 >
                   <Wallet className="w-5 h-5" />
                   <span>Cek Upah Saya</span>
-                </button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -270,7 +250,6 @@ export default function LandingPage() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <button
-                  onClick={handleGetStarted}
                   className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Mulai Gratis
@@ -347,7 +326,7 @@ export default function LandingPage() {
               <div className="space-y-2 text-gray-400">
                 <p>📧 info@blockwage.com</p>
                 <p>📱 +62 812-3456-7890</p>
-                <p>📍 Makassar, Indonesia</p>
+                <p>📍 Kendari, Indonesia</p>
               </div>
             </div>
           </div>

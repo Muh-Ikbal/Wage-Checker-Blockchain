@@ -144,18 +144,7 @@ function Login() {
               </div>
             </div>
 
-            {/* Footer Links */}
-            <div className="text-center space-y-2">
-              <button className="text-black hover:text-black text-sm transition-colors">
-                Lupa kata sandi?
-              </button>
-              <div className="text-black text-opacity-60 text-xs">
-                Belum punya akun?{" "}
-                <button className="text-black hover:text-black font-medium transition-colors">
-                  Daftar di sini
-                </button>
-              </div>
-            </div>
+            
           </div>
         </div>
 
