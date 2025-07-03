@@ -21,6 +21,7 @@ Aplikasi berbasis React dan Ethereum (Ganache/MetaMask) untuk mencatat dan memve
 - MetaMask
 - Supabase (untuk login Web2)
 - Truffle
+- node v-18
 
 ---
 
