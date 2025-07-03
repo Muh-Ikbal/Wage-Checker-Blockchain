@@ -5,7 +5,7 @@ Aplikasi berbasis React dan Ethereum (Ganache/MetaMask) untuk mencatat dan memve
 ## 🛠️ Fitur Utama
 
 - ✅ Pencatatan upah oleh mandor
-- 🔍 Pengecekan upah pekerja berdasarkan ID atau nama
+- 🔍 Pengecekan upah pekerja berdasarkan ID
 - 🔐 Autentikasi dengan JWT
 - 🔗 Koneksi wallet (MetaMask)
 - 📦 Penyimpanan upah langsung ke smart contract
