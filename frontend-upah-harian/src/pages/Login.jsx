@@ -32,11 +32,9 @@ function Login() {
     }
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleLogin();
-    }
-  };
+  // const handleKeyPress = (e) => {
+  //     handleLogin();
+  // };
 
   return (
     <div className="min-h-screen text-black w-full bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
@@ -78,7 +76,6 @@ function Login() {
                   placeholder="Masukkan email Anda"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  onKeyPress={handleKeyPress}
                   className="w-full pl-11 pr-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-xl text-black placeholder-blue-200 placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 />
               </div>
@@ -96,7 +93,6 @@ function Login() {
                   placeholder="Masukkan kata sandi"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  onKeyPress={handleKeyPress}
                   className="w-full pl-11 pr-12 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-xl text-black placeholder-blue-200 placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 />
                 <button
