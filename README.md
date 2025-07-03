@@ -38,6 +38,7 @@ cd frontend-upah-harian
 npm install
 ```
 ### 3. **jalankan blockchain**
+pastikan **ganache** sudah running
 ```bash
 cd blockchain
 truffle compile
