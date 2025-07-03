@@ -43,7 +43,9 @@ cd blockchain
 truffle compile
 truffle migrate
 ```
+
 ### 4. **salin contract address dari truffle migrate**
+copy contract address yang sudah di generate melalu **truffle migrate** lalu paste ke **/frontend-upah-harian/src/components/blockchain.js**
 paste contract di file:
 ```bash
 cd frontend-upah-harian/components/blockchain.js
