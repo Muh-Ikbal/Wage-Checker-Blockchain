@@ -166,36 +166,6 @@ export default function WageCheckPage({
           </div>
         </div>
       </header>
-
-      
-
-      {/* Blockchain Status Bar */}
-      {walletConnected && (
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full">
-                  <Link className="w-4 h-4 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-medium text-blue-800">
-                    Terhubung ke Blockchain
-                  </h3>
-                  <p className="text-sm text-blue-700">
-                    Ethereum Mainnet • Gas Price: ~20 Gwei • Block: #18,542,891
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm text-blue-700">Online</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search Section */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
