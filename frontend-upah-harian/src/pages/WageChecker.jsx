@@ -61,16 +61,16 @@ export default function WageCheckPage({
   };
 
   const handleSearch = () => {
-    if (!walletConnected) {
-      alert(
-        "Silakan hubungkan wallet terlebih dahulu untuk mengakses data blockchain"
-      );
-      return;
-    }
-    if (!workerId.trim()) {
-      alert("Masukkan ID Pekerja");
-      return;
-    }
+    // if (!walletConnected) {
+    //   alert(
+    //     "Silakan hubungkan wallet terlebih dahulu untuk mengakses data blockchain"
+    //   );
+    //   return;
+    // }
+    // if (!workerId.trim()) {
+    //   alert("Masukkan ID P ekerja");
+    //   return;
+    // }
 
     fetchWages();
   };
@@ -161,87 +161,13 @@ export default function WageCheckPage({
 
             {/* Wallet Connection Section */}
             <div className="flex items-center space-x-4">
-              {!walletConnected ? (
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={async () => await connectWallet()}
-                    className="flex items-center space-x-2 bg-orange-500 hover:bg-orange-600 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium"
-                  >
-                    <span>Connect Wallet</span>
-                  </button>
-
-                  <div className="relative group">
-                    <button className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium">
-                      <Wallet className="w-4 h-4" />
-                      <span>Wallet Lain</span>
-                    </button>
-
-                    {/* Dropdown for other wallets */}
-                    <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                      <div className="py-2">
-                        <button
-                          onClick={() => connectWallet("walletconnect")}
-                          className="w-full text-left px-4 py-2 hover:bg-gray-50 flex items-center space-x-2"
-                        >
-                          <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                          <span>WalletConnect</span>
-                        </button>
-                        <button
-                          onClick={() => connectWallet("trustwallet")}
-                          className="w-full text-left px-4 py-2 hover:bg-gray-50 flex items-center space-x-2"
-                        >
-                          <div className="w-4 h-4 bg-blue-600 rounded"></div>
-                          <span>Trust Wallet</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center space-x-4">
-                  {/* Wallet Info */}
-                  <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-2">
-                    <div className="flex items-center space-x-3">
-                      <div className="flex items-center justify-center w-8 h-8 bg-green-100 rounded-full">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                      </div>
-                      <div>
-                        <div className="flex items-center space-x-2">
-                          <p className="text-xs text-green-600">
-                            {walletAddress}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Disconnect Button */}
-                </div>
-              )}
+              
             </div>
           </div>
         </div>
       </header>
 
-      {/* Wallet Connection Alert */}
-      {!walletConnected && (
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-6">
-            <div className="flex items-center space-x-3">
-              <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0" />
-              <div>
-                <h3 className="text-sm font-medium text-yellow-800">
-                  Koneksi Wallet Diperlukan
-                </h3>
-                <p className="text-sm text-yellow-700 mt-1">
-                  Hubungkan wallet Anda untuk mengakses data upah dari
-                  blockchain dan melakukan verifikasi transaksi.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      
 
       {/* Blockchain Status Bar */}
       {walletConnected && (

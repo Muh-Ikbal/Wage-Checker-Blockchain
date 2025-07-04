@@ -57,6 +57,10 @@ export default function DashboardAdmin({ walletAddress, walletConnected }) {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!walletConnected || !walletAddress) {
+      alert("Silakan hubungkan dompet Anda terlebih dahulu");
+      return;
+    }
     try {
       if (amount < 0) {
         alert("Upah tidak valid");

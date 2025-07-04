@@ -1,16 +1,26 @@
 // src/blockchain.js
-import { BrowserProvider, Contract } from "ethers";
+import { BrowserProvider, Contract, JsonRpcProvider } from "ethers";
 import abi from "../../../blockchain/build/contracts/WageRecorder.json";
 
-const contractAddress = "0xC1eD3fB786041c894F6F2574358e61Bfc1F622a3";
+const contractAddress = "0xA5203B0ABA8C4DfDb945A49739D49bd58188e71a";
 
 const getReadProvider = () => new BrowserProvider(window.ethereum);
+const getReadProviderUser = () => new JsonRpcProvider("http://127.0.0.1:7545");
+
 
 // Untuk kontrak hanya membaca
 export const getReadContract = async () => {
   const provider = await getReadProvider();
   return new Contract(contractAddress, abi.abi, provider);
 };
+
+// Untuk kontrak user hanya membaca
+export const getReadContractUser = async () => {
+  const provider = await getReadProviderUser();
+  return new Contract(contractAddress, abi.abi, provider);
+};
+
+
 
 // Untuk kontrak dengan hak menulis (dengan signer)
 export const getWriteContract = async () => {
@@ -21,7 +31,7 @@ export const getWriteContract = async () => {
 };
 
 export const getAllWages = async () => {
-  const contract = await getReadContract();
+  const contract = await getReadContractUser();
   const count = await contract.getWagesCount();
   const wages = [];
   for (let i = 0; i < count; i++) {
