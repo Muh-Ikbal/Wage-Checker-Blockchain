@@ -52,6 +52,9 @@ export default function LandingPage() {
               </a>
             </nav>
             <div className="flex space-x-3">
+              <a href="/login" className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium">
+                                    <span>Masuk</span>
+                                  </a>
               <a
               href="/wage-check"
                 className="px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors"
