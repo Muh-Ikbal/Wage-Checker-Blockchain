@@ -16,7 +16,7 @@ Aplikasi berbasis React dan Ethereum (Ganache/MetaMask) untuk mencatat dan memve
 ## 📦 Teknologi
 
 - React
-- Solidity
+- solana
 - Ganache (local blockchain)
 - MetaMask
 - Supabase (untuk login Web2)
